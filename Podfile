@@ -8,4 +8,5 @@ target 'FirebasePlayground' do
   # Pods for FirebasePlayground
   
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end

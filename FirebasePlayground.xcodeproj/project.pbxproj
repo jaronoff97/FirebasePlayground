@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		896221381F4CB6010099DE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896221371F4CB6010099DE55 /* AppDelegate.swift */; };
-		8962213A1F4CB6010099DE55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896221391F4CB6010099DE55 /* ViewController.swift */; };
 		8962213D1F4CB6010099DE55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8962213B1F4CB6010099DE55 /* Main.storyboard */; };
 		8962213F1F4CB6010099DE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8962213E1F4CB6010099DE55 /* Assets.xcassets */; };
 		896221421F4CB6010099DE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896221401F4CB6010099DE55 /* LaunchScreen.storyboard */; };
 		8962214A1F4CB7430099DE55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 896221491F4CB7430099DE55 /* GoogleService-Info.plist */; };
+		8962214C1F4CBB6F0099DE55 /* GroceryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962214B1F4CBB6F0099DE55 /* GroceryListTableViewController.swift */; };
+		8962214E1F4CBC540099DE55 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962214D1F4CBC540099DE55 /* Protocols.swift */; };
+		896221501F4CC0C20099DE55 /* FirebaseInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962214F1F4CC0C20099DE55 /* FirebaseInitialization.swift */; };
+		896221521F4CC32F0099DE55 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896221511F4CC32F0099DE55 /* GroceryItem.swift */; };
 		9AD205FD1F3E19BCFE6FD0D8 /* Pods_FirebasePlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8389567B31E8C69F0387497A /* Pods_FirebasePlayground.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +24,15 @@
 		8389567B31E8C69F0387497A /* Pods_FirebasePlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebasePlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		896221341F4CB6010099DE55 /* FirebasePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebasePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		896221371F4CB6010099DE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		896221391F4CB6010099DE55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8962213C1F4CB6010099DE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8962213E1F4CB6010099DE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		896221411F4CB6010099DE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		896221431F4CB6010099DE55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		896221491F4CB7430099DE55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8962214B1F4CBB6F0099DE55 /* GroceryListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewController.swift; sourceTree = "<group>"; };
+		8962214D1F4CBC540099DE55 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		8962214F1F4CC0C20099DE55 /* FirebaseInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseInitialization.swift; sourceTree = "<group>"; };
+		896221511F4CC32F0099DE55 /* GroceryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		F06A19F773CEE11C7E203735 /* Pods-FirebasePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebasePlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebasePlayground/Pods-FirebasePlayground.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,8 +78,11 @@
 		896221361F4CB6010099DE55 /* FirebasePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				8962214B1F4CBB6F0099DE55 /* GroceryListTableViewController.swift */,
+				8962214F1F4CC0C20099DE55 /* FirebaseInitialization.swift */,
+				896221511F4CC32F0099DE55 /* GroceryItem.swift */,
+				8962214D1F4CBC540099DE55 /* Protocols.swift */,
 				896221371F4CB6010099DE55 /* AppDelegate.swift */,
-				896221391F4CB6010099DE55 /* ViewController.swift */,
 				8962213B1F4CB6010099DE55 /* Main.storyboard */,
 				8962213E1F4CB6010099DE55 /* Assets.xcassets */,
 				896221401F4CB6010099DE55 /* LaunchScreen.storyboard */,
@@ -216,8 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8962213A1F4CB6010099DE55 /* ViewController.swift in Sources */,
+				896221501F4CC0C20099DE55 /* FirebaseInitialization.swift in Sources */,
 				896221381F4CB6010099DE55 /* AppDelegate.swift in Sources */,
+				8962214C1F4CBB6F0099DE55 /* GroceryListTableViewController.swift in Sources */,
+				896221521F4CC32F0099DE55 /* GroceryItem.swift in Sources */,
+				8962214E1F4CBC540099DE55 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
