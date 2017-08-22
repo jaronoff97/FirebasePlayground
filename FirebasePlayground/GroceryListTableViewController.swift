@@ -85,6 +85,13 @@ class GroceryListTableViewController: UITableViewController {
             print("done")
         }
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let groceryItem = items?[indexPath.row]
+            self.firebase?.removeItem(id: (groceryItem?.id)!)
+        }
+    }
 
 }
 extension GroceryListTableViewController: FirebaseTableDelegate {

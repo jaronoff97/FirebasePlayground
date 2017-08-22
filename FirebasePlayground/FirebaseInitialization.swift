@@ -25,7 +25,8 @@ class FirebaseInitialization {
         }
         let removeFunc = { (data: FIRDataSnapshot) in
             let index = self.items.index(where: { (item) -> Bool in
-                item.id == data.value(forKey: "id") as! String
+                let properties = data.value as? NSDictionary
+                return item.id == properties!.value(forKey: "id") as! String
             })
             self.items.remove(at: index!)
             delegate.reloadData()
@@ -40,5 +41,9 @@ class FirebaseInitialization {
     
     func addItem(item: FirebaseItem) {
         childRef.child(item.id).setValue(item.toJSON())
+    }
+    
+    func removeItem(id: String) {
+        childRef.child(id).removeValue()
     }
 }
