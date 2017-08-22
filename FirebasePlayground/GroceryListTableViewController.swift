@@ -57,6 +57,34 @@ class GroceryListTableViewController: UITableViewController {
         print(self.items?[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    @IBAction func addItem(_ sender: Any) {
+        let alert = UIAlertController(title: "Add Item", message: "Add an item to grocery list", preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Name"
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Price"
+            textField.keyboardType = .decimalPad
+        }
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+            let nameTextField = alert?.textFields![0]
+            let priceTextField = alert?.textFields![1]
+            let price = Double((priceTextField?.text)!)
+            let uuid = UUID().uuidString
+            let item = GroceryItem(id: uuid, name: (nameTextField?.text)!, price: price!)
+            self.firebase?.addItem(item: item)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            print("cancel")
+        }))
+        present(alert, animated: true) { 
+            print("done")
+        }
+    }
 
 }
 extension GroceryListTableViewController: FirebaseTableDelegate {

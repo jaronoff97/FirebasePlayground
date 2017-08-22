@@ -37,4 +37,8 @@ class FirebaseInitialization {
     func getItems() -> [FirebaseItem] {
         return items
     }
+    
+    func addItem(item: FirebaseItem) {
+        childRef.child(item.id).setValue(item.toJSON())
+    }
 }

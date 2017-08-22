@@ -17,9 +17,15 @@ struct GroceryItem: FirebaseItem {
     
     init(fromFirebaseItem item: FIRDataSnapshot) {
         let properties = item.value as? NSDictionary
-        id = properties?.value(forKey: "id") as! String
-        name = properties?.value(forKey: "name") as! String
-        price = properties?.value(forKey: "price") as! Double
+        self.id = properties?.value(forKey: "id") as! String
+        self.name = properties?.value(forKey: "name") as! String
+        self.price = properties?.value(forKey: "price") as! Double
+    }
+    
+    init(id: String, name: String, price: Double) {
+        self.id = id
+        self.name = name
+        self.price = price
     }
     
     func toJSON() -> [String: Any] {
